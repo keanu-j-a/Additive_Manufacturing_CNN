@@ -1,0 +1,11 @@
+This is a github repository of the code used to construct a rudimentary convolutional neural network (CNN) using keras, tensorflow, and jupyter notebooks.
+Two CNN models are presented in this basic experiment. This dataset was trained on a dataset of 50,000 images of concrete bridge cracks. The CNN designed
+sucessfully maintained an accuracy of 88 % on three epochs.
+
+In order to reproduce the results of this experiment, please follow the steps outlined below:
+
+1.) Download the kaggle repository in this link: https://www.kaggle.com/datasets/yidazhang07/bridge-cracks-image
+
+2.) Copy and paste the code provided. Be sure to change the file path to your personal download loacation (commented in the code).
+
+3.) Run the code and enjoy the results =)
