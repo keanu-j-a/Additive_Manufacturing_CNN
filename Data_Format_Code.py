@@ -7,7 +7,7 @@ import random
 import pickle
 label = ['cracks', 'no_cracks']
 
-directory = "/Users/kageammons/Desktop/archive/Bridge_Crack_Image/DBCC_Training_Data_Set/train"
+directory = "/Users/kageammons/Desktop/archive/Bridge_Crack_Image/DBCC_Training_Data_Set/train" #Change this to match your download location
 labels = ['cracked','non-cracked']
 
 for image in os.listdir(directory):
