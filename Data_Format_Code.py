@@ -65,3 +65,6 @@ pickle_out.close()
 pickle_out = open("ybridge.pickle", "wb")
 pickle.dump(y, pickle_out)
 pickle_out.close()
+
+from tensorflow import keras
+model.save('CNN_model')
