@@ -1,18 +1,3 @@
-import numpy as np
-import matplotlib.pyplot as plt
-import os
-from tqdm import tqdm
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D, Activation, MaxPooling2D, Flatten, Dense
-
-import tensorflow as tf
-import pickle
-
-X = pickle.load(open("Xbridge.pickle","rb"))
-y = pickle.load(open("Ybridge.pickle","rb"))
-X = X / 5
-layer = Sequential()
-
 
 """
 
@@ -51,9 +36,7 @@ model.add(MaxPooling2D(pool_size=(5, 3)))
 model.add(Flatten())  # this converts our 3D feature maps to 1D feature vectors
 
 model.add(Dense(1))
-model.add(Activation('sigmoid'))
-
-model.add(Dense(64))
+model.add(Activation('relu'))
 
 model.add(Dense(1))
 model.add(Activation('sigmoid'))
@@ -64,5 +47,5 @@ model.compile(loss='binary_crossentropy',
 
 y = np.array(y)
 
-model.fit(X, y, batch_size=32, epochs=3, validation_split=0.1)
+model.fit(X, y, batch_size=32, epochs=5, validation_split=0.2, callbacks = [tensorboard])
 
